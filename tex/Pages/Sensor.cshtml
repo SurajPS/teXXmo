@@ -1,0 +1,21 @@
+﻿@page
+@model SensorModel
+@{
+    ViewData["Title"] = "Sensor";
+}
+<h2>@ViewData["Title"]</h2>
+<h3>@Model.Message</h3>
+
+<label>Sensor device</label><input type="text" id="sensorname" />
+
+<button id="generate" onclick="generatefn()"> Generate</button>
+<div id="figuresec"></div>
+<script>
+    function generatefn() {
+
+        var sensorname = document.getElementById("sensorname");
+        var divsec = document.getElementById("figuresec");
+        divsec.innerHTML = "<p> " + sensorname.value.toString() + " </p>";
+    }
+
+</script>
